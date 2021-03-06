@@ -7,14 +7,20 @@ process of removing the digits to the right of the decimal place.
 */
 package main
 
-//
-//import "fmt"
-//
-//var inputNumber float64
-//func main()  {
-//	fmt.Println("Enter a Float number:=>")
-//	fmt.Scan(&inputNumber)
-//
-//	fmt.Printf("The number you've entered is '%v'.\n",inputNumber)
-//	fmt.Printf("Truncated version of '%v' is '%v'.\n",inputNumber,int64(inputNumber))
-//}
+import (
+	"fmt"
+	"log"
+)
+
+var inputNumber float64
+
+func main() {
+	fmt.Println("Enter a Float number:=>")
+	_, err := fmt.Scan(&inputNumber)
+	if err != nil {
+		log.Printf("[Error] Invalid input !")
+	}
+
+	fmt.Printf("The number you've entered is '%v'.\n", inputNumber)
+	fmt.Printf("Truncated version of '%v' is '%v'.\n", inputNumber, int64(inputNumber))
+}

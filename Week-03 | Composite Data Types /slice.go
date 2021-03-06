@@ -1,4 +1,5 @@
 /*
+Question:
 Write a program which prompts the user to enter integers and stores the integers in a sorted slice.
 The program should be written as a loop. Before entering the loop, the program should create an empty
 integer slice of size (length) 3. During each pass through the loop, the program prompts the user to
