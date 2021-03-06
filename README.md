@@ -1,4 +1,7 @@
-## Course: [Getting Started with Go](https://www.coursera.org/learn/golang-getting-started/home/info)
+## Getting Started with Go: University of California, Irvine
+- Corurse Link: [https://www.coursera.org/learn/golang-getting-started/home/info](https://www.coursera.org/learn/golang-getting-started/home/info)
+
+---
 
 ### Week 01 | [`Getting Started with Go`](./Week-01)
 ![alt text](docs/week-01.png)
