@@ -6,22 +6,21 @@ import (
 	"time"
 )
 
-var wg sync.WaitGroup
-
 func main() {
-	//only main routine is printed (without sleep)
+	//var wg sync.WaitGroup
 
 	// goroutine
 	go fmt.Println("This is from goroutine call")
 
 	//main routine
 	fmt.Println("This is normal call")
+	//only main routine is printed (without sleep)
 	time.Sleep(1000 * time.Microsecond)
 
 	/*
 		// with waitGroup
 		wg.Add(1)			// increase counter ++
-		go simpleFunct()	// execute thread
+		go simpleFunct(&wg)	// execute thread
 		wg.Wait()			// wait for execution
 
 		//main routine
@@ -29,7 +28,7 @@ func main() {
 	*/
 }
 
-func simpleFunct() {
+func simpleFunct(wg *sync.WaitGroup) {
 	go fmt.Println("This is from goroutine call") // call goroutine
-	wg.Done()                                     // decrement counter --
+	defer wg.Done()                               // decrement counter --
 }
